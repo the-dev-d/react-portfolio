@@ -1,12 +1,12 @@
 nav{
     padding: 1rem 0rem 1rem 0rem;
-    width: 95vw;
+    width: 90%;
     margin: 0.5rem 0rem 0.5rem 0rem;
     /* border: 1px solid white; */
 }
 header {
     width: 90vw;
-    padding: 2rem;
+    padding: 1rem;
     border: 1px solid var(--border);
     border-radius: 10px;
     height: 85vh;
@@ -77,6 +77,7 @@ img {
         justify-content: space-around;
     }
     header {
+        width: 80%;
         height: 80vh;
         grid-template-rows: 10% 70% 10%;
     }

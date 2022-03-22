@@ -16,7 +16,7 @@ function App() {
         Degree from BPC College Piravom.
       </Detailbar>
       <Languages/>
-      <Footer/>
+      {/* <Footer/> */}
       <Floatnav />
     </>
   );
