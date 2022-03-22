@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Face from './components/Face'
+import QuoteTile from './components/QuoteTile';
+import Detailbar from './components/Detailbar';
+import Languages from './components/Languages';
+import Floatnav from './components/Floatingsection';
+import Footer from './components/Footer';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Face/>
+      <QuoteTile/>
+      <Detailbar>
+        I completed by Computer Science High Schooling from
+        M.K.M H.S.S Piravom and currently I'm doing my Computer Application
+        Degree from BPC College Piravom.
+      </Detailbar>
+      <Languages/>
+      <Footer/>
+      <Floatnav />
+    </>
   );
 }
 
