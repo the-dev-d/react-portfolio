@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './floatnav.css'
 class Floatnav extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             expand:true,
-            fullscreen:false
+            fullscreen:false,
+            display:true
         };
         document.addEventListener('fullscreenchange',(event)=>{
             if(document.fullscreenElement) {
@@ -19,10 +20,18 @@ class Floatnav extends Component {
                 elem.classList.add("fa-expand");
             }
         })
+        document.addEventListener("scroll", () => {
+            if ((window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight) {
+                this.setState({display:false});
+            }
+            else if(!this.state.display) {
+                this.setState({display:true});
+            }
+        })
     }
     render() { 
         return (
-            <div className="flex flex-center floatnav">
+            this.state.display&&<div className="flex flex-center floatnav">
                 {this.state.expand&&<a href="#home"> <i className="fa-solid fa-house"></i> </a> }
                 {this.state.expand&&<a href="#about"> <i className="fa-solid fa-address-card"></i> </a> }
                 {this.state.expand&&<a href="#skills"> <i className="fa-solid fa-microchip"></i> </a> }
@@ -39,7 +48,8 @@ class Floatnav extends Component {
             })
         }
         else {
-            document.exitFullscreen();
+            if(document.fullscreenElement)
+                document.exitFullscreen();
         }
     }
 }

@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
 import './face.css';
 class Face extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         document.addEventListener("dbclick",()=>{
             document.documentElement.requestFullscreen().catch((err)=>{
                 console.log(err);
@@ -25,7 +25,7 @@ class Face extends Component {
                     </div>
                     <div className="mainface grid grid-center" style={{alignContent:'flex-end',marginBottom: '5%'}} >
                         <div className="floater"></div>
-                        <img src={"/assets/alphabgpic.png"} alt="my pic" />
+                        <img src={this.props.image.src} alt="my pic" />
                         <h3>Hi.. I'm Dhaivath</h3>
                     </div>
                     <div className="text"> <h4> &nbsp; ----THE DEV-D</h4> </div>
