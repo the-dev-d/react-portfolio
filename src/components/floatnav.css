@@ -29,3 +29,17 @@ a{
         display: none;
     }
 }
+.slide-bottom-enter {
+    transform: translate(-50%,200%);
+}
+.slide-bottom-enter-active {
+  transform: translateX(-50%);
+  transition: all 500ms;
+}
+.slide-bottom-exit {
+    transform: translateX(-50%);
+    transition: all 200ms;
+}
+.slide-bottom-exit-active,.slide-bottom-exit-done {
+    transform: translate(-50%,200%);
+}

@@ -23,7 +23,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.transition{
+  transition: height 0.3s ease-in-out;
+}
 .App-link {
   color: #61dafb;
 }

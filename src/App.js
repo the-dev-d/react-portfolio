@@ -6,6 +6,7 @@ import Languages from './components/Languages';
 import Floatnav from './components/Floatingsection';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
+import Os from './components/Os';
 import { Component } from 'react';
 class App extends Component {
   constructor() {
@@ -27,6 +28,7 @@ class App extends Component {
           Degree from BPC College Piravom.
           </Detailbar>
           <Languages/>
+          <Os />
           <Footer/>
           <Floatnav />
         </>
