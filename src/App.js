@@ -25,7 +25,7 @@ function App() {
       <Languages/>
       {/* <Footer/> */}
       <Floatnav />
-    </> : <>Loading...</>
+    </> : <h3>Loading...</h3>
   );
 }
 
