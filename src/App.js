@@ -4,11 +4,18 @@ import QuoteTile from './components/QuoteTile';
 import Detailbar from './components/Detailbar';
 import Languages from './components/Languages';
 import Floatnav from './components/Floatingsection';
-import Footer from './components/Footer';
+import { useState } from 'react';
+// import Footer from './components/Footer';
 function App() {
-  return (
+
+  var [loader,setLoader] = useState(false);
+  var img = new Image()
+  img.src = 'assets/pic.png';
+  img.onload = () => {setLoader(true)}
+
+  return ( loader ? 
     <>
-      <Face/>
+      <Face image={img}/>
       <QuoteTile/>
       <Detailbar>
         I completed by Computer Science High Schooling from
@@ -18,7 +25,7 @@ function App() {
       <Languages/>
       {/* <Footer/> */}
       <Floatnav />
-    </>
+    </> : <>Loading...</>
   );
 }
 
