@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import './face.css';
+import MyPic from './assets/pic.png';
+
 class Face extends Component {
     constructor() {
         super();
@@ -23,10 +25,11 @@ class Face extends Component {
                         <a target="_blank" rel="noreferrer" href="https://twitter.com/DhaivathLal"> <i class="icon fa-brands fa-twitter"></i></a>
                         <a target="_blank" rel="noreferrer" href="https://github.com/the-dev-d/"> <i class="icon fa-brands fa-github"></i></a>
                     </div>
-                    <div className="mainface grid grid-center" style={{alignContent:'flex-end',marginBottom: '5%'}} >
-                        <div className="floater"></div>
-                        <img src={"/assets/alphabgpic.png"} alt="my pic" />
-                        <h3>Hi.. I'm Dhaivath</h3>
+                    <div className="mainface flex flex-center" >
+                        <div className="face-container">
+                            <img className='mypic' src={MyPic} alt="My Pic" />
+                            <div className="flicker-tile"></div>
+                        </div>
                     </div>
                     <div className="text"> <h4> &nbsp; ----THE DEV-D</h4> </div>
                 </header>
